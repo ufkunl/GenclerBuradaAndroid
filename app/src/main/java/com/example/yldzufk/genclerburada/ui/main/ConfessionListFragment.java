@@ -1,4 +1,4 @@
-package com.example.yldzufk.genclerburada.ui.confessionlist;
+package com.example.yldzufk.genclerburada.ui.main;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -6,17 +6,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.yldzufk.genclerburada.MainActivity;
 import com.example.yldzufk.genclerburada.R;
 import com.example.yldzufk.genclerburada.base.BaseFragment;
-import com.example.yldzufk.genclerburada.ui.common.NavigationController;
 
 /**
  * Created by PC on 18.12.2018.
  */
 
 public class ConfessionListFragment extends BaseFragment{
-
 
     public static ConfessionListFragment fragment;
 
@@ -37,10 +34,7 @@ public class ConfessionListFragment extends BaseFragment{
 
         View view = inflater.inflate(R.layout.fragment_confession_list,container,false);
 
-
        // NavigationController navigationController = new NavigationController((MainActivity) getActivity());
-
-
 
         return view;
 
