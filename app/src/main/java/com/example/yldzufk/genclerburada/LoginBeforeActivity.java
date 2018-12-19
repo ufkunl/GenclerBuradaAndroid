@@ -4,9 +4,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.example.yldzufk.genclerburada.ui.common.NavigationController;
-import com.example.yldzufk.genclerburada.ui.mainBefore.HomeFragment;
 
-public class MainBeforeActivity extends AppCompatActivity {
+public class LoginBeforeActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

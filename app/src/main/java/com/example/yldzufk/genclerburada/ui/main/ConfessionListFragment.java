@@ -34,7 +34,7 @@ public class ConfessionListFragment extends BaseFragment{
 
         View view = inflater.inflate(R.layout.fragment_confession_list,container,false);
 
-       // NavigationController navigationController = new NavigationController((MainActivity) getActivity());
+       // NavigationController navigationController = new NavigationController((LoginAfterActivity) getActivity());
 
         return view;
 

@@ -5,7 +5,7 @@ import android.os.Bundle;
 
 import com.example.yldzufk.genclerburada.ui.common.NavigationController;
 
-public class MainActivity extends AppCompatActivity {
+public class LoginAfterActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

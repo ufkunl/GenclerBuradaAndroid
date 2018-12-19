@@ -9,7 +9,7 @@
         android:id="@+id/ivBackground"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@drawable/backgraund"
+        android:src="@drawable/background"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
