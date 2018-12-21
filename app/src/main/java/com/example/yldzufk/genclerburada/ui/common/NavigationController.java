@@ -5,7 +5,9 @@ import android.support.v4.app.FragmentManager;
 import com.example.yldzufk.genclerburada.LoginAfterActivity;
 import com.example.yldzufk.genclerburada.LoginBeforeActivity;
 import com.example.yldzufk.genclerburada.R;
-import com.example.yldzufk.genclerburada.ui.main.ConfessionListFragment;
+import com.example.yldzufk.genclerburada.ui.loginBefore.ChangePasswordFragment;
+import com.example.yldzufk.genclerburada.ui.loginBefore.ForgotPasswordFragment;
+import com.example.yldzufk.genclerburada.ui.loginAfter.ConfessionListFragment;
 import com.example.yldzufk.genclerburada.ui.loginBefore.HomeFragment;
 import com.example.yldzufk.genclerburada.ui.loginBefore.LoginFragment;
 import com.example.yldzufk.genclerburada.ui.loginBefore.SignUpFragment;
@@ -42,19 +44,36 @@ public class NavigationController {
                 .add(containerId,homeFragment)
                 .commitAllowingStateLoss();
     }
+    
 
     public void navigateToLogin(){
         LoginFragment loginFragment = LoginFragment.newInstance();
         fragmentManager.beginTransaction()
-                .add(containerId,loginFragment)
+                .replace(containerId,loginFragment)
+                .addToBackStack(loginFragment.getClass().getCanonicalName())
                 .commitAllowingStateLoss();
     }
 
     public void navigateToSignUp(){
         SignUpFragment signUpFragment = SignUpFragment.newInstance();
         fragmentManager.beginTransaction()
-                .add(containerId,signUpFragment)
+                .replace(containerId,signUpFragment)
+                .addToBackStack(signUpFragment.getClass().getCanonicalName())
                 .commitAllowingStateLoss();
     }
 
+    public void navigateToForgotPassword(){
+        ForgotPasswordFragment forgotPasswordFragment = ForgotPasswordFragment.newInstance();
+        fragmentManager.beginTransaction()
+                .replace(containerId,forgotPasswordFragment)
+                .addToBackStack(forgotPasswordFragment.getClass().getCanonicalName())
+                .commitAllowingStateLoss();
+    }
+
+    public void navigateToChangePassword(){
+        ChangePasswordFragment changePasswordFragment = ChangePasswordFragment.newInstance();
+        fragmentManager.beginTransaction()
+                .add(containerId,changePasswordFragment)
+                .commitAllowingStateLoss();
+    }
 }

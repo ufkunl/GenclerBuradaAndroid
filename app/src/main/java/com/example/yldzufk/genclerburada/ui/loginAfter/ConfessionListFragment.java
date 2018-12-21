@@ -1,4 +1,4 @@
-package com.example.yldzufk.genclerburada.ui.main;
+package com.example.yldzufk.genclerburada.ui.loginAfter;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

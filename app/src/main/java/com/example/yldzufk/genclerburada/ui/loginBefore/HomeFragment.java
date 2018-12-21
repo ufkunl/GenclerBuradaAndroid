@@ -1,10 +1,13 @@
 package com.example.yldzufk.genclerburada.ui.loginBefore;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 
 import com.example.yldzufk.genclerburada.LoginBeforeActivity;
@@ -30,21 +33,21 @@ public class HomeFragment extends BaseFragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+
         View view = inflater.inflate(R.layout.fragment_home,container,false);
 
-        Button btnUyeol =(Button) view.findViewById(R.id.btnUyeOl);
-        Button btnGiris =(Button) view.findViewById(R.id.btnGiris);
+        Button btnSignUp =(Button) view.findViewById(R.id.btnSignUp);
+        Button btnLogin =(Button) view.findViewById(R.id.btnLogin);
 
-        btnUyeol.setOnClickListener(new View.OnClickListener() {
+        btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 NavigationController navigationController = new NavigationController((LoginBeforeActivity) getActivity());
                 navigationController.navigateToSignUp();
-
             }
         });
 
-        btnGiris.setOnClickListener(new View.OnClickListener() {
+        btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 NavigationController navigationController = new NavigationController((LoginBeforeActivity) getActivity());
