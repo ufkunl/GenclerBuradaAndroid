@@ -73,7 +73,7 @@ public class NavigationController {
     public void navigateToChangePassword(){
         ChangePasswordFragment changePasswordFragment = ChangePasswordFragment.newInstance();
         fragmentManager.beginTransaction()
-                .add(containerId,changePasswordFragment)
+                .replace(containerId,changePasswordFragment)
                 .commitAllowingStateLoss();
     }
 }
