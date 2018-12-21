@@ -7,3 +7,5 @@
 /build
 /captures
 .externalNativeBuild
+*.xml
+app/src/main/res/layout/fragment_forgot_password.xml
