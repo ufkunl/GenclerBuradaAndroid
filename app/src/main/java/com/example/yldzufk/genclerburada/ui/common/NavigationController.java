@@ -1,5 +1,6 @@
 package com.example.yldzufk.genclerburada.ui.common;
 
+import android.content.Intent;
 import android.support.v4.app.FragmentManager;
 
 import com.example.yldzufk.genclerburada.LoginAfterActivity;
@@ -20,15 +21,19 @@ public class NavigationController {
 
     private FragmentManager fragmentManager;
     private int containerId;
+    private LoginAfterActivity loginAfterActivity;
+    private LoginBeforeActivity loginBeforeActivity;
 
     public NavigationController(LoginAfterActivity loginAfterActivity) {
         this.fragmentManager = loginAfterActivity.getSupportFragmentManager();
         this.containerId = R.id.container;
+        this.loginAfterActivity = loginAfterActivity;
     }
 
     public NavigationController(LoginBeforeActivity loginBeforeActivity) {
         this.fragmentManager = loginBeforeActivity.getSupportFragmentManager();
         this.containerId = R.id.container;
+        this.loginBeforeActivity = loginBeforeActivity;
     }
 
     public void navigateToConfessionList(){
@@ -74,6 +79,13 @@ public class NavigationController {
         ChangePasswordFragment changePasswordFragment = ChangePasswordFragment.newInstance();
         fragmentManager.beginTransaction()
                 .replace(containerId,changePasswordFragment)
+                .addToBackStack(changePasswordFragment.getClass().getCanonicalName())
                 .commitAllowingStateLoss();
     }
+
+    public void navigateToLoginAfter(){
+        Intent intent = new Intent(loginBeforeActivity,LoginAfterActivity.class);
+        loginBeforeActivity.startActivity(intent);
+    }
+
 }

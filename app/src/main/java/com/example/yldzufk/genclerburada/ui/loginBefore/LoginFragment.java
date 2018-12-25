@@ -21,6 +21,8 @@ public class LoginFragment extends BaseFragment {
 
     public static LoginFragment fragment;
 
+    NavigationController navigationController;
+
     public static LoginFragment newInstance() {
         if(fragment != null){
             return fragment;
@@ -37,6 +39,8 @@ public class LoginFragment extends BaseFragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_login,container,false);
 
+        navigationController = new NavigationController((LoginBeforeActivity) getActivity());
+
         ImageButton btnBack = (ImageButton) view.findViewById(R.id.btnBack);
 
         btnBack.setOnClickListener(new View.OnClickListener() {
@@ -51,7 +55,6 @@ public class LoginFragment extends BaseFragment {
         tvForgetPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                NavigationController navigationController = new NavigationController((LoginBeforeActivity) getActivity());
                 navigationController.navigateToForgotPassword();
             }
         });
@@ -61,8 +64,15 @@ public class LoginFragment extends BaseFragment {
         tvSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                NavigationController navigationController = new NavigationController((LoginBeforeActivity) getActivity());
                 navigationController.navigateToSignUp();
+            }
+        });
+
+        Button btnSignUp = (Button)view.findViewById(R.id.btnSignUp);
+        btnSignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                navigationController.navigateToLoginAfter();
             }
         });
 
