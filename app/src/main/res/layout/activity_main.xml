@@ -18,7 +18,7 @@
             android:layout_centerVertical="true"
             android:layout_marginStart="15dp"
             android:background="@android:color/transparent"
-            android:src="@drawable/btn_left_menu" />
+            android:src="@drawable/back_arrow" />
 
         <TextView
             android:layout_width="wrap_content"
